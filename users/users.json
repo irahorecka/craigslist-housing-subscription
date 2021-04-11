@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Ira Horecka",
+        "email": ["ira89@icloud.com", "andrew.oh516@gmail.com"],
+        "site": "sfbay",
+        "filters": {
+            "min_price": 1200,
+            "max_price": 1700,
+            "min_bedrooms": 1
+        },
+        "zip_code": 94041,
+        "search_distance": 10
+    }
+]
