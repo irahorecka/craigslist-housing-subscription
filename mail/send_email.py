@@ -22,7 +22,7 @@ def write_email(user, posts):
     metadata.construct_MIME()
 
     # Build header email content
-    email_content = f"Hey {user['name'].title()}, I found some new housing deals on Craigslist near {user['zip_code']}.To stop these emails, write 'STOP' to ira89@icloud.com."
+    email_content = f"Hey {user['name'].title()}, I found some new housing deals on Craigslist near {user['zip_code']}. To stop these emails, write 'STOP' to ira89@icloud.com."
     try:
         # Attempt to send email to user if new posts found
         text, html = current_mail.markup(email_content)

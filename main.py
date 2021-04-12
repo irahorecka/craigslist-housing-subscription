@@ -18,7 +18,7 @@ def main():
 
     while True:
         # Sleep for a day (-80 seconds) to fetch posts
-        print('sleeping...')
+        print("sleeping...")
         time.sleep(86320)
         user_posts = zip(users_json, posts.get(users_json))
         for user, post in user_posts:
