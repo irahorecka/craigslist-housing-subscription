@@ -2,7 +2,9 @@ beautifulsoup4==4.9.3
 cchardet==2.1.7
 certifi==2020.12.5
 chardet==4.0.0
+greenlet==1.1.0
 idna==2.10
+importlib-metadata==4.0.1
 lxml==4.6.3
 numpy==1.20.3
 pandas==1.2.4
@@ -12,5 +14,8 @@ pytz==2021.1
 requests==2.25.1
 six==1.16.0
 soupsieve==2.2.1
+SQLAlchemy==1.4.15
 tenacity==7.0.0
+typing-extensions==3.10.0.0
 urllib3==1.26.4
+zipp==3.4.1
