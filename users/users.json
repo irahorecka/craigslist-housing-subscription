@@ -1,7 +1,7 @@
 [
     {
-        "name": "Ira Horecka",
-        "email": ["ira89@icloud.com", "irahorecka@yahoo.com"],
+        "name": "Andrew",
+        "email": ["ira89@icloud.com", "andrew.oh516@gmail.com"],
         "site": "sfbay",
         "filters": {
             "min_price": 1200,
@@ -10,5 +10,17 @@
         },
         "zip_code": 94041,
         "search_distance": 10
+    },
+    {
+        "name": "Ira",
+        "email": "ira89@icloud.com",
+        "site": "toronto",
+        "filters": {
+            "min_price": 800,
+            "max_price": 1200,
+            "min_bedrooms": 1
+        },
+        "zip_code": 66777,
+        "search_distance": 20
     }
 ]
