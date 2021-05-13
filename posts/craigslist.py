@@ -1,5 +1,6 @@
 import pandas as pd
 import pycraigslist
+from pycraigslist.exceptions import MaximumRequestsError
 
 # Create a unique enough key to allow segregating of scraped craigslist content
 CODE_BREAK = ";n@nih;"
@@ -13,10 +14,13 @@ def get_apa_posts(user_filter):
     filters["zip_code"] = user_filter["zip_code"]
     filters["search_distance"] = user_filter["search_distance"]
     # Build pycraigslist.housing.apa object for search
-    user_search = pycraigslist.housing.apa(
-        site=user_filter["site"], area=user_filter.get("area", ""), filters=filters
-    )
-    return get_posts_df(user_search)
+    try:
+        user_search = pycraigslist.housing.apa(
+            site=user_filter["site"], area=user_filter.get("area", ""), filters=filters
+        )
+        return get_posts_df(user_search)
+    except MaximumRequestsError:
+        return get_apa_posts(user_filter)
 
 
 def get_posts_df(user_search):
