@@ -20,6 +20,8 @@ def main():
         # Sleep for a day (-80 seconds) to fetch posts
         print("sleeping...")
         time.sleep(86320)
+        # Get users' json file for every iteration - allows for updates during operation
+        users_json = users.get_users()
         user_posts = zip(users_json, posts.get(users_json))
         for user, post in user_posts:
             mail.write_email(user, post)
